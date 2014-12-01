@@ -24,3 +24,11 @@ Extracting the value:
 let value = left.either({ x in x }, { string in countElements(string) })
 ```
 
+Representing success/failure:
+
+```swift
+let result = someComputation() // result has type `Either<Error, T>`
+let success = result.either({ _ in nil }, { x in x }) // success has type `T?`
+let error = result.either({ x in x }, { _ in nil }) // error has type `Error?`
+```
+
