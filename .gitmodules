@@ -1,0 +1,3 @@
+[submodule "External/Box"]
+	path = External/Box
+	url = https://github.com/robrix/Box.git
