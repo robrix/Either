@@ -32,3 +32,27 @@ let success = result.either({ _ in nil }, { x in x }) // success has type `T?`
 let error = result.either({ x in x }, { _ in nil }) // error has type `Error?`
 ```
 
+However, you might instead prefer to use a [more tailored `Result`](https://github.com/LlamaKit/LlamaKit) type. Even if it doesn’t conform to `EitherType` already, you can implement conformance in your application:
+
+```swift
+extension Result: EitherType { // Result<T, Error>
+	static func left(value: Error) -> Result {
+		return failure(value)
+	}
+
+	static func right(value: T) -> Result {
+		return success(value)
+	}
+
+	func either<Result>(f: Error -> Result, g: T -> Result) -> Result {
+		switch self {
+		case let Success(x):
+			return g(x)
+		case let Failure(error):
+			return f(error)
+		}
+	}
+}
+```
+
+Now you can use generic functions like `==`, `!=`, and any you might write with both `Either` and `Result`.
