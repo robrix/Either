@@ -6,3 +6,14 @@ This is a Swift microframework providing `Either<Left, Right>` and `EitherType`,
 
 `EitherType` is an easy-to-adopt protocol (it requires one method and two constructor functions) which allows clients to generically use `Either` or conforming `Result`, etc. types.
 
+
+## Use
+
+Constructing an `Either`:
+
+```swift
+// Wrap:
+let left = Either<Int, String>.left(4)
+let right = Either<Int, String>.right("four")
+```
+
