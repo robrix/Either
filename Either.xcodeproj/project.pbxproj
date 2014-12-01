@@ -10,6 +10,7 @@
 		D4C038951A2BFF2300C262C7 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0388F1A2BFF2300C262C7 /* Either.framework */; };
 		D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
+		D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		D4C0389A1A2BFF2300C262C7 /* EitherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EitherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038A01A2BFF2300C262C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C038A11A2BFF2300C262C7 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
+		D4C038B11A2C009A00C262C7 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-ahfeozcnnwhlpebposjtmhadcyik/Build/Products/Debug/Box.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 		D4C038851A2BFF2300C262C7 = {
 			isa = PBXGroup;
 			children = (
+				D4C038B11A2C009A00C262C7 /* Box.framework */,
 				D4C038911A2BFF2300C262C7 /* Either */,
 				D4C0389E1A2BFF2300C262C7 /* EitherTests */,
 				D4C038901A2BFF2300C262C7 /* Products */,
@@ -321,6 +325,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-ahfeozcnnwhlpebposjtmhadcyik/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -340,6 +348,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-ahfeozcnnwhlpebposjtmhadcyik/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -400,6 +412,7 @@
 				D4C038A71A2BFF2300C262C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "EitherTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +421,7 @@
 				D4C038AA1A2BFF2300C262C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
