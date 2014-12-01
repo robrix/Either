@@ -5,7 +5,7 @@ import XCTest
 
 func id<T>(x: T) -> T { return x }
 
-class EitherTests: XCTestCase {
+final class EitherTests: XCTestCase {
 	let left = Either<Int, String>.left(4)
 	let right = Either<Int, String>.right("four")
 
