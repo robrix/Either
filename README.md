@@ -17,3 +17,10 @@ let left = Either<Int, String>.left(4)
 let right = Either<Int, String>.right("four")
 ```
 
+Extracting the value:
+
+```swift
+// Unwrap:
+let value = left.either({ x in x }, { string in countElements(string) })
+```
+
