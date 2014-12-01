@@ -56,3 +56,6 @@ extension Result: EitherType { // Result<T, Error>
 ```
 
 Now you can use generic functions like `==`, `!=`, and any you might write with both `Either` and `Result`.
+
+API documentation is in the source.
+
