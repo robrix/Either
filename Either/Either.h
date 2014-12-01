@@ -5,4 +5,3 @@ extern double EitherVersionNumber;
 
 /// Project version string for Either.
 extern const unsigned char EitherVersionString[];
-
