@@ -19,3 +19,10 @@ public protocol EitherType {
 	func either<Result>(f: Left -> Result, _ g: Right -> Result) -> Result
 }
 
+
+// MARK: API
+
+/// Equality (tho not `Equatable`) over `EitherType` with `Left`: `Equatable` & `Right`: `Equatable`.
+public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
+	return lhs.either({ $0 == rhs.either(id, const(nil)) }, { $0 == rhs.either(const(nil), id) })
+}
