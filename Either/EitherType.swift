@@ -26,3 +26,9 @@ public protocol EitherType {
 public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
 	return lhs.either({ $0 == rhs.either(id, const(nil)) }, { $0 == rhs.either(const(nil), id) })
 }
+
+
+/// Inequality over `EitherType` where `Left` & `Right` : `Equatable`.
+public func != <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
+	return !(lhs == rhs)
+}
