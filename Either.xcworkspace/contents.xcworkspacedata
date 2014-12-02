@@ -7,4 +7,7 @@
    <FileRef
       location = "group:External/Box/Box.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:External/Prelude/Prelude.xcodeproj">
+   </FileRef>
 </Workspace>
