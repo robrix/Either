@@ -32,3 +32,8 @@ public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs:
 public func != <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
 	return !(lhs == rhs)
 }
+
+
+// MARK: Imports
+
+import Prelude
