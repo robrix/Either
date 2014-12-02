@@ -14,7 +14,6 @@
 		D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 		D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
-		D4C038B81A2C041500C262C7 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B71A2C041500C262C7 /* Prelude.swift */; };
 		D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		D4C038B11A2C009A00C262C7 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-ahfeozcnnwhlpebposjtmhadcyik/Build/Products/Debug/Box.framework"; sourceTree = "<group>"; };
 		D4C038B31A2C00BB00C262C7 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		D4C038B51A2C012000C262C7 /* EitherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherType.swift; sourceTree = "<group>"; };
-		D4C038B71A2C041500C262C7 /* Prelude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prelude.swift; sourceTree = "<group>"; };
 		D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTypeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +88,6 @@
 				D4C038941A2BFF2300C262C7 /* Either.h */,
 				D4C038B31A2C00BB00C262C7 /* Either.swift */,
 				D4C038B51A2C012000C262C7 /* EitherType.swift */,
-				D4C038B71A2C041500C262C7 /* Prelude.swift */,
 				D4C038921A2BFF2300C262C7 /* Supporting Files */,
 			);
 			path = Either;
@@ -229,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C038B81A2C041500C262C7 /* Prelude.swift in Sources */,
 				D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */,
 				D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */,
 			);
