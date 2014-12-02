@@ -1,3 +1,6 @@
 [submodule "External/Box"]
 	path = External/Box
 	url = https://github.com/robrix/Box.git
+[submodule "External/Prelude"]
+	path = External/Prelude
+	url = https://github.com/robrix/Prelude.git
