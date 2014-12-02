@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAF0451A2E86E3006E25DF /* Prelude.framework */; };
 		D4C038951A2BFF2300C262C7 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0388F1A2BFF2300C262C7 /* Either.framework */; };
 		D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4BAF0451A2E86E3006E25DF /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-ahfeozcnnwhlpebposjtmhadcyik/Build/Products/Debug/Prelude.framework"; sourceTree = "<group>"; };
 		D4C0388F1A2BFF2300C262C7 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038931A2BFF2300C262C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C038941A2BFF2300C262C7 /* Either.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Either.h; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */,
 				D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,9 +67,10 @@
 		D4C038851A2BFF2300C262C7 = {
 			isa = PBXGroup;
 			children = (
-				D4C038B11A2C009A00C262C7 /* Box.framework */,
 				D4C038911A2BFF2300C262C7 /* Either */,
 				D4C0389E1A2BFF2300C262C7 /* EitherTests */,
+				D4BAF0451A2E86E3006E25DF /* Prelude.framework */,
+				D4C038B11A2C009A00C262C7 /* Box.framework */,
 				D4C038901A2BFF2300C262C7 /* Products */,
 			);
 			sourceTree = "<group>";
