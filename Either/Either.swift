@@ -39,6 +39,11 @@ public enum Either<T, U>: EitherType, Printable {
 		}
 	}
 
+	/// Maps `Right` instances with `f`, and returns `Left` instances as-is.
+	public func map<V>(f: U -> V) -> Either<T, V> {
+		return either(Either<T, V>.left, f >>> Either<T, V>.right)
+	}
+
 
 	// MARK: Printable
 
@@ -51,3 +56,4 @@ public enum Either<T, U>: EitherType, Printable {
 // MARK: Imports
 
 import Box
+import Prelude
