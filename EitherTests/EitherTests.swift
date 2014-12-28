@@ -1,9 +1,8 @@
 //  Copyright (c) 2014 Rob Rix. All rights reserved.
 
 import Either
+import Prelude
 import XCTest
-
-func id<T>(x: T) -> T { return x }
 
 final class EitherTests: XCTestCase {
 	let left = Either<Int, String>.left(4)
