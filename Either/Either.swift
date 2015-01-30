@@ -50,6 +50,11 @@ public enum Either<T, U>: EitherType, Printable {
 		return either(id, const(nil))
 	}
 
+	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
+	var right: U? {
+		return either(const(nil), id)
+	}
+
 
 	// MARK: Printable
 
