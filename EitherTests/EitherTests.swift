@@ -45,4 +45,9 @@ final class EitherTests: XCTestCase {
 		let result = (left >>- isFull).either(id, const(0))
 		XCTAssertEqual(result, 4)
 	}
+
+	func testFlatMapAppliesItsRightOperandToRightValues() {
+		let result = (right >>- isFull).either(const(false), id)
+		XCTAssert(result)
+	}
 }
