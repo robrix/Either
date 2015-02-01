@@ -8,6 +8,13 @@ final class EitherTests: XCTestCase {
 	let left = Either<Int, String>.left(4)
 	let right = Either<Int, String>.right("four")
 
+	func isFull<T>(string: String) -> Either<T, Bool> {
+		return .right(!string.isEmpty)
+	}
+
+
+	// MARK: - either
+
 	func testEitherExtractsFromLeft() {
 		let value = left.either(id, countElements)
 		XCTAssertEqual(value, 4)
@@ -18,6 +25,9 @@ final class EitherTests: XCTestCase {
 		XCTAssertEqual(value, "four")
 	}
 
+
+	// MARK: - map
+
 	func testMapIgnoresLeftValues() {
 		let result = left.map(const(5)).either(id, id)
 		XCTAssertEqual(result, 4)
@@ -26,5 +36,18 @@ final class EitherTests: XCTestCase {
 	func testMapAppliesToRightValues() {
 		let result = right.map(const(5)).either(id, id)
 		XCTAssertEqual(result, 5)
+	}
+
+
+	// MARK: - >>-
+
+	func testFlatMapRetypesLeftValues() {
+		let result = (left >>- isFull).either(id, const(0))
+		XCTAssertEqual(result, 4)
+	}
+
+	func testFlatMapAppliesItsRightOperandToRightValues() {
+		let result = (right >>- isFull).either(const(false), id)
+		XCTAssert(result)
 	}
 }

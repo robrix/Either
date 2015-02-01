@@ -64,7 +64,29 @@ public enum Either<T, U>: EitherType, Printable {
 }
 
 
-// MARK: Imports
+// MARK: - Free functions
+
+/// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
+///
+/// This is the bind or flat map operator, and is useful for chaining computations taking some parameter and returning an `Either`.
+public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Either<T, V> {
+	return left.either(Either<T, V>.left, right)
+}
+
+
+// MARK: - Operators
+
+infix operator >>- {
+	// Left-associativity so that chaining works like you’d expect, and for consistency with Haskell, Runes, swiftz, etc.
+	associativity left
+
+	// Higher precedence than function application, but lower than function composition.
+	precedence 150
+}
+
+
+
+// MARK: - Imports
 
 import Box
 import Prelude
