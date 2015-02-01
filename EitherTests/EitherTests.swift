@@ -8,6 +8,9 @@ final class EitherTests: XCTestCase {
 	let left = Either<Int, String>.left(4)
 	let right = Either<Int, String>.right("four")
 
+
+	// MARK: - either
+
 	func testEitherExtractsFromLeft() {
 		let value = left.either(id, countElements)
 		XCTAssertEqual(value, 4)
@@ -17,6 +20,9 @@ final class EitherTests: XCTestCase {
 		let value = right.either(toString, id)
 		XCTAssertEqual(value, "four")
 	}
+
+
+	// MARK: - map
 
 	func testMapIgnoresLeftValues() {
 		let result = left.map(const(5)).either(id, id)
