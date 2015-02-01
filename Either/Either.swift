@@ -64,10 +64,7 @@ public enum Either<T, U>: EitherType, Printable {
 }
 
 
-infix operator >>- {
-	associativity left
-	precedence 150
-}
+// MARK: - Free functions
 
 /// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
 ///
@@ -77,7 +74,16 @@ public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Eith
 }
 
 
-// MARK: Imports
+// MARK: - Operators
+
+infix operator >>- {
+	associativity left
+	precedence 150
+}
+
+
+
+// MARK: - Imports
 
 import Box
 import Prelude
