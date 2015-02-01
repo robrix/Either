@@ -64,6 +64,12 @@ public enum Either<T, U>: EitherType, Printable {
 }
 
 
+infix operator >>- {
+	associativity left
+	precedence 150
+}
+
+
 // MARK: Imports
 
 import Box
