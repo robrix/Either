@@ -37,4 +37,12 @@ final class EitherTests: XCTestCase {
 		let result = right.map(const(5)).either(id, id)
 		XCTAssertEqual(result, 5)
 	}
+
+
+	// MARK: - >>-
+
+	func testFlatMapRetypesLeftValues() {
+		let result = (left >>- isFull).either(id, const(0))
+		XCTAssertEqual(result, 4)
+	}
 }
