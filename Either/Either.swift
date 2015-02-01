@@ -77,6 +77,7 @@ public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Eith
 // MARK: - Operators
 
 infix operator >>- {
+	// Left-associativity so that chaining works like you’d expect, and for consistency with Haskell, Runes, swiftz, etc.
 	associativity left
 	precedence 150
 }
