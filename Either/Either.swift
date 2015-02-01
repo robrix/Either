@@ -69,6 +69,9 @@ infix operator >>- {
 	precedence 150
 }
 
+/// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
+///
+/// This is the bind or flat map operator, and is useful for chaining computations taking some parameter and returning an `Either`.
 public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Either<T, V> {
 	return left.either(Either<T, V>.left, right)
 }
