@@ -69,6 +69,10 @@ infix operator >>- {
 	precedence 150
 }
 
+public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Either<T, V> {
+	return left.either(Either<T, V>.left, right)
+}
+
 
 // MARK: Imports
 
