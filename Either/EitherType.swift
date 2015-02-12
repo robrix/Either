@@ -10,10 +10,10 @@ public protocol EitherType {
 	typealias Right
 
 	/// Constructs a `Left` instance.
-	class func left(value: Left) -> Self
+	static func left(value: Left) -> Self
 
 	/// Constructs a `Right` instance.
-	class func right(value: Right) -> Self
+	static func right(value: Right) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
 	func either<Result>(f: Left -> Result, _ g: Right -> Result) -> Result

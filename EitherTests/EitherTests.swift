@@ -16,7 +16,7 @@ final class EitherTests: XCTestCase {
 	// MARK: - either
 
 	func testEitherExtractsFromLeft() {
-		let value = left.either(id, countElements)
+		let value = left.either(id, count)
 		XCTAssertEqual(value, 4)
 	}
 
