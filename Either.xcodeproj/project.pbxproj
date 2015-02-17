@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D43209E71A89407200B0CB85 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
-		D43209E81A89407600B0CB85 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 		D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAF0451A2E86E3006E25DF /* Prelude.framework */; };
 		D4C038951A2BFF2300C262C7 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0388F1A2BFF2300C262C7 /* Either.framework */; };
 		D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
-		D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 		D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
 		D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
+		F8BB81F31A939E04001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
+		F8BB81F41A939E16001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BB81F31A939E04001AA352 /* Box.framework in Frameworks */,
 				D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */,
-				D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D43209E81A89407600B0CB85 /* Box.framework in Frameworks */,
+				F8BB81F41A939E16001AA352 /* Box.framework in Frameworks */,
 				D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,9 +136,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D4C0388E1A2BFF2300C262C7 /* Either */ = {
+		D4C0388E1A2BFF2300C262C7 /* Either-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either" */;
+			buildConfigurationList = D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-Mac" */;
 			buildPhases = (
 				D4C0388A1A2BFF2300C262C7 /* Sources */,
 				D4C0388B1A2BFF2300C262C7 /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = Either;
+			name = "Either-Mac";
 			productName = Either;
 			productReference = D4C0388F1A2BFF2300C262C7 /* Either.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D4C038991A2BFF2300C262C7 /* EitherTests */ = {
+		D4C038991A2BFF2300C262C7 /* Either-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "EitherTests" */;
+			buildConfigurationList = D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-MacTests" */;
 			buildPhases = (
 				D4C038961A2BFF2300C262C7 /* Sources */,
 				D4C038971A2BFF2300C262C7 /* Frameworks */,
@@ -167,7 +167,7 @@
 			dependencies = (
 				D4C0389D1A2BFF2300C262C7 /* PBXTargetDependency */,
 			);
-			name = EitherTests;
+			name = "Either-MacTests";
 			productName = EitherTests;
 			productReference = D4C0389A1A2BFF2300C262C7 /* EitherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -201,8 +201,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4C0388E1A2BFF2300C262C7 /* Either */,
-				D4C038991A2BFF2300C262C7 /* EitherTests */,
+				D4C0388E1A2BFF2300C262C7 /* Either-Mac */,
+				D4C038991A2BFF2300C262C7 /* Either-MacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +249,7 @@
 /* Begin PBXTargetDependency section */
 		D4C0389D1A2BFF2300C262C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4C0388E1A2BFF2300C262C7 /* Either */;
+			target = D4C0388E1A2BFF2300C262C7 /* Either-Mac */;
 			targetProxy = D4C0389C1A2BFF2300C262C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -349,7 +349,7 @@
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Either;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -368,7 +368,7 @@
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Either;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -417,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either" */ = {
+		D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C038A61A2BFF2300C262C7 /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "EitherTests" */ = {
+		D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C038A91A2BFF2300C262C7 /* Debug */,
