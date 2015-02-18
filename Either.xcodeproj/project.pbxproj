@@ -15,20 +15,20 @@
 		D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
 		D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
+		D4EC3EF31A9457570080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
+		D4EC3EF41A9457570080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
+		D4EC3EF51A94576F0080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
+		D4EC3EF61A94576F0080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
+		D4EC3EF71A94577B0080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
+		D4EC3EF81A94577B0080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
+		D4EC3EF91A9457800080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
+		D4EC3EFA1A9457800080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
+		D4EC3EFB1A9457840080B23E /* Disjunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADD91A944DF4002E3542 /* Disjunction.swift */; };
+		D4EC3EFC1A9457890080B23E /* DisjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */; };
 		F8BB82051A939EA0001AA352 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB81FA1A939EA0001AA352 /* Either.framework */; };
 		F8BB82161A939F57001AA352 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8BB82171A939F6C001AA352 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		F8BB82181A939F6C001AA352 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
-		F8BB82191A939F8D001AA352 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
-		F8BB821A1A939F8D001AA352 /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
-		F8BB821C1A939FB8001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
-		F8BB821E1A939FBB001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
-		F8BB821F1A939FCB001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
-		F8BB82201A939FCB001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
-		F8BB82211A939FD4001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
-		F8BB82221A939FD9001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
-		F8BB82231A939FE0001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
-		F8BB82241A939FE2001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,10 @@
 		D4C038B31A2C00BB00C262C7 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		D4C038B51A2C012000C262C7 /* EitherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherType.swift; sourceTree = "<group>"; };
 		D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTypeTests.swift; sourceTree = "<group>"; };
+		D4EC3EF11A9457570080B23E /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4EC3EF21A9457570080B23E /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB81FA1A939EA0001AA352 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB82041A939EA0001AA352 /* Either-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Either-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BB821B1A939FB8001AA352 /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug/Prelude.framework"; sourceTree = "<group>"; };
-		F8BB821D1A939FBB001AA352 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug/Box.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BB821C1A939FB8001AA352 /* Prelude.framework in Frameworks */,
-				F8BB821E1A939FBB001AA352 /* Box.framework in Frameworks */,
+				D4EC3EF31A9457570080B23E /* Box.framework in Frameworks */,
+				D4EC3EF41A9457570080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +81,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */,
-				F8BB82231A939FE0001AA352 /* Prelude.framework in Frameworks */,
-				F8BB82241A939FE2001AA352 /* Box.framework in Frameworks */,
+				D4EC3EF71A94577B0080B23E /* Box.framework in Frameworks */,
+				D4EC3EF81A94577B0080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BB821F1A939FCB001AA352 /* Box.framework in Frameworks */,
-				F8BB82201A939FCB001AA352 /* Prelude.framework in Frameworks */,
+				D4EC3EF51A94576F0080B23E /* Box.framework in Frameworks */,
+				D4EC3EF61A94576F0080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8BB82051A939EA0001AA352 /* Either.framework in Frameworks */,
-				F8BB82221A939FD9001AA352 /* Prelude.framework in Frameworks */,
-				F8BB82211A939FD4001AA352 /* Box.framework in Frameworks */,
+				D4EC3EF91A9457800080B23E /* Box.framework in Frameworks */,
+				D4EC3EFA1A9457800080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +143,8 @@
 		D4C038921A2BFF2300C262C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F8BB821D1A939FBB001AA352 /* Box.framework */,
-				F8BB821B1A939FB8001AA352 /* Prelude.framework */,
+				D4EC3EF11A9457570080B23E /* Box.framework */,
+				D4EC3EF21A9457570080B23E /* Prelude.framework */,
 				D4C038931A2BFF2300C262C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -241,7 +241,7 @@
 			dependencies = (
 			);
 			name = "Either-iOS";
-			productName = "Either";
+			productName = Either;
 			productReference = F8BB81FA1A939EA0001AA352 /* Either.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -283,8 +283,8 @@
 					};
 					F8BB82031A939EA0001AA352 = {
 						CreatedOnToolsVersion = 6.3;
+					};
 				};
-			};
 			};
 			buildConfigurationList = D4C038891A2BFF2300C262C7 /* Build configuration list for PBXProject "Either" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -353,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */,
+				D4EC3EFC1A9457890080B23E /* DisjunctionTests.swift in Sources */,
 				D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +364,7 @@
 			files = (
 				F8BB82181A939F6C001AA352 /* EitherType.swift in Sources */,
 				F8BB82171A939F6C001AA352 /* Either.swift in Sources */,
+				D4EC3EFB1A9457840080B23E /* Disjunction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,10 +482,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
-				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -503,10 +501,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
-				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -523,7 +517,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -542,7 +535,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = EitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -560,10 +552,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -589,10 +577,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
-				);
 				INFOPLIST_FILE = "$(SRCROOT)/Either/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -613,7 +597,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -635,7 +618,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = EitherTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -683,6 +665,7 @@
 				F8BB820F1A939EA0001AA352 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8BB82101A939EA0001AA352 /* Build configuration list for PBXNativeTarget "Either-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +674,7 @@
 				F8BB82121A939EA0001AA352 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
