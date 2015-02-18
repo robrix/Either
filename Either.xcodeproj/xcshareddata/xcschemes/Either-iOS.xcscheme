@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4C0388E1A2BFF2300C262C7"
+               BlueprintIdentifier = "F8BB81F91A939EA0001AA352"
                BuildableName = "Either.framework"
-               BlueprintName = "Either"
+               BlueprintName = "Either-iOS"
                ReferencedContainer = "container:Either.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4C038991A2BFF2300C262C7"
-               BuildableName = "EitherTests.xctest"
-               BlueprintName = "EitherTests"
+               BlueprintIdentifier = "F8BB82031A939EA0001AA352"
+               BuildableName = "Either-iOSTests.xctest"
+               BlueprintName = "Either-iOSTests"
                ReferencedContainer = "container:Either.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4C038991A2BFF2300C262C7"
-               BuildableName = "EitherTests.xctest"
-               BlueprintName = "EitherTests"
+               BlueprintIdentifier = "F8BB82031A939EA0001AA352"
+               BuildableName = "Either-iOSTests.xctest"
+               BlueprintName = "Either-iOSTests"
                ReferencedContainer = "container:Either.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4C0388E1A2BFF2300C262C7"
+            BlueprintIdentifier = "F8BB81F91A939EA0001AA352"
             BuildableName = "Either.framework"
-            BlueprintName = "Either"
+            BlueprintName = "Either-iOS"
             ReferencedContainer = "container:Either.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4C0388E1A2BFF2300C262C7"
+            BlueprintIdentifier = "F8BB81F91A939EA0001AA352"
             BuildableName = "Either.framework"
-            BlueprintName = "Either"
+            BlueprintName = "Either-iOS"
             ReferencedContainer = "container:Either.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4C0388E1A2BFF2300C262C7"
+            BlueprintIdentifier = "F8BB81F91A939EA0001AA352"
             BuildableName = "Either.framework"
-            BlueprintName = "Either"
+            BlueprintName = "Either-iOS"
             ReferencedContainer = "container:Either.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D43209E71A89407200B0CB85 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
-		D43209E81A89407600B0CB85 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 		D456ADDA1A944DF4002E3542 /* Disjunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADD91A944DF4002E3542 /* Disjunction.swift */; };
 		D456ADDC1A944FBA002E3542 /* DisjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */; };
-		D456ADDD1A9450A2002E3542 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAF0451A2E86E3006E25DF /* Prelude.framework */; };
-		D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAF0451A2E86E3006E25DF /* Prelude.framework */; };
 		D4C038951A2BFF2300C262C7 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0388F1A2BFF2300C262C7 /* Either.framework */; };
 		D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
-		D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C038B11A2C009A00C262C7 /* Box.framework */; };
 		D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
 		D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
+		F8BB82051A939EA0001AA352 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB81FA1A939EA0001AA352 /* Either.framework */; };
+		F8BB82161A939F57001AA352 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8BB82171A939F6C001AA352 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
+		F8BB82181A939F6C001AA352 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
+		F8BB82191A939F8D001AA352 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
+		F8BB821A1A939F8D001AA352 /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
+		F8BB821C1A939FB8001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
+		F8BB821E1A939FBB001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
+		F8BB821F1A939FCB001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
+		F8BB82201A939FCB001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
+		F8BB82211A939FD4001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
+		F8BB82221A939FD9001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
+		F8BB82231A939FE0001AA352 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821B1A939FB8001AA352 /* Prelude.framework */; };
+		F8BB82241A939FE2001AA352 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BB821D1A939FBB001AA352 /* Box.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,22 +39,31 @@
 			remoteGlobalIDString = D4C0388E1A2BFF2300C262C7;
 			remoteInfo = Either;
 		};
+		F8BB82061A939EA0001AA352 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4C038861A2BFF2300C262C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8BB81F91A939EA0001AA352;
+			remoteInfo = "Either-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D456ADD91A944DF4002E3542 /* Disjunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disjunction.swift; sourceTree = "<group>"; };
 		D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisjunctionTests.swift; sourceTree = "<group>"; };
-		D4BAF0451A2E86E3006E25DF /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C0388F1A2BFF2300C262C7 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038931A2BFF2300C262C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C038941A2BFF2300C262C7 /* Either.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Either.h; sourceTree = "<group>"; };
-		D4C0389A1A2BFF2300C262C7 /* EitherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EitherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C0389A1A2BFF2300C262C7 /* Either-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Either-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038A01A2BFF2300C262C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C038A11A2BFF2300C262C7 /* EitherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EitherTests.swift; sourceTree = "<group>"; };
-		D4C038B11A2C009A00C262C7 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038B31A2C00BB00C262C7 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		D4C038B51A2C012000C262C7 /* EitherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherType.swift; sourceTree = "<group>"; };
 		D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTypeTests.swift; sourceTree = "<group>"; };
+		F8BB81FA1A939EA0001AA352 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BB82041A939EA0001AA352 /* Either-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Either-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BB821B1A939FB8001AA352 /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Prelude.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug/Prelude.framework"; sourceTree = "<group>"; };
+		F8BB821D1A939FBB001AA352 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug/Box.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BAF0461A2E86E3006E25DF /* Prelude.framework in Frameworks */,
-				D4C038B21A2C009A00C262C7 /* Box.framework in Frameworks */,
+				F8BB821C1A939FB8001AA352 /* Prelude.framework in Frameworks */,
+				F8BB821E1A939FBB001AA352 /* Box.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +80,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D456ADDD1A9450A2002E3542 /* Prelude.framework in Frameworks */,
-				D43209E81A89407600B0CB85 /* Box.framework in Frameworks */,
 				D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */,
+				F8BB82231A939FE0001AA352 /* Prelude.framework in Frameworks */,
+				F8BB82241A939FE2001AA352 /* Box.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB81F61A939EA0001AA352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BB821F1A939FCB001AA352 /* Box.framework in Frameworks */,
+				F8BB82201A939FCB001AA352 /* Prelude.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB82011A939EA0001AA352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BB82051A939EA0001AA352 /* Either.framework in Frameworks */,
+				F8BB82221A939FD9001AA352 /* Prelude.framework in Frameworks */,
+				F8BB82211A939FD4001AA352 /* Box.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				D4C0388F1A2BFF2300C262C7 /* Either.framework */,
-				D4C0389A1A2BFF2300C262C7 /* EitherTests.xctest */,
+				D4C0389A1A2BFF2300C262C7 /* Either-MacTests.xctest */,
+				F8BB81FA1A939EA0001AA352 /* Either.framework */,
+				F8BB82041A939EA0001AA352 /* Either-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,8 +143,8 @@
 		D4C038921A2BFF2300C262C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4C038B11A2C009A00C262C7 /* Box.framework */,
-				D4BAF0451A2E86E3006E25DF /* Prelude.framework */,
+				F8BB821D1A939FBB001AA352 /* Box.framework */,
+				F8BB821B1A939FB8001AA352 /* Prelude.framework */,
 				D4C038931A2BFF2300C262C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -141,12 +180,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8BB81F71A939EA0001AA352 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BB82161A939F57001AA352 /* Either.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D4C0388E1A2BFF2300C262C7 /* Either */ = {
+		D4C0388E1A2BFF2300C262C7 /* Either-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either" */;
+			buildConfigurationList = D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-Mac" */;
 			buildPhases = (
 				D4C0388A1A2BFF2300C262C7 /* Sources */,
 				D4C0388B1A2BFF2300C262C7 /* Frameworks */,
@@ -157,14 +204,14 @@
 			);
 			dependencies = (
 			);
-			name = Either;
+			name = "Either-Mac";
 			productName = Either;
 			productReference = D4C0388F1A2BFF2300C262C7 /* Either.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D4C038991A2BFF2300C262C7 /* EitherTests */ = {
+		D4C038991A2BFF2300C262C7 /* Either-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "EitherTests" */;
+			buildConfigurationList = D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-MacTests" */;
 			buildPhases = (
 				D4C038961A2BFF2300C262C7 /* Sources */,
 				D4C038971A2BFF2300C262C7 /* Frameworks */,
@@ -175,9 +222,45 @@
 			dependencies = (
 				D4C0389D1A2BFF2300C262C7 /* PBXTargetDependency */,
 			);
-			name = EitherTests;
+			name = "Either-MacTests";
 			productName = EitherTests;
-			productReference = D4C0389A1A2BFF2300C262C7 /* EitherTests.xctest */;
+			productReference = D4C0389A1A2BFF2300C262C7 /* Either-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8BB81F91A939EA0001AA352 /* Either-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BB820D1A939EA0001AA352 /* Build configuration list for PBXNativeTarget "Either-iOS" */;
+			buildPhases = (
+				F8BB81F51A939EA0001AA352 /* Sources */,
+				F8BB81F61A939EA0001AA352 /* Frameworks */,
+				F8BB81F71A939EA0001AA352 /* Headers */,
+				F8BB81F81A939EA0001AA352 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Either-iOS";
+			productName = "Either";
+			productReference = F8BB81FA1A939EA0001AA352 /* Either.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8BB82031A939EA0001AA352 /* Either-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BB82101A939EA0001AA352 /* Build configuration list for PBXNativeTarget "Either-iOSTests" */;
+			buildPhases = (
+				F8BB82001A939EA0001AA352 /* Sources */,
+				F8BB82011A939EA0001AA352 /* Frameworks */,
+				F8BB82021A939EA0001AA352 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8BB82071A939EA0001AA352 /* PBXTargetDependency */,
+			);
+			name = "Either-iOSTests";
+			productName = "Either-iOSTests";
+			productReference = F8BB82041A939EA0001AA352 /* Either-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -195,7 +278,13 @@
 					D4C038991A2BFF2300C262C7 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					F8BB81F91A939EA0001AA352 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					F8BB82031A939EA0001AA352 = {
+						CreatedOnToolsVersion = 6.3;
 				};
+			};
 			};
 			buildConfigurationList = D4C038891A2BFF2300C262C7 /* Build configuration list for PBXProject "Either" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,8 +298,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4C0388E1A2BFF2300C262C7 /* Either */,
-				D4C038991A2BFF2300C262C7 /* EitherTests */,
+				D4C0388E1A2BFF2300C262C7 /* Either-Mac */,
+				D4C038991A2BFF2300C262C7 /* Either-MacTests */,
+				F8BB81F91A939EA0001AA352 /* Either-iOS */,
+				F8BB82031A939EA0001AA352 /* Either-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +315,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D4C038981A2BFF2300C262C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB81F81A939EA0001AA352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB82021A939EA0001AA352 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -249,8 +354,23 @@
 			files = (
 				D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */,
 				D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB81F51A939EA0001AA352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BB82181A939F6C001AA352 /* EitherType.swift in Sources */,
+				F8BB82171A939F6C001AA352 /* Either.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BB82001A939EA0001AA352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 				D456ADDC1A944FBA002E3542 /* DisjunctionTests.swift in Sources */,
-				D43209E71A89407200B0CB85 /* EitherType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +379,13 @@
 /* Begin PBXTargetDependency section */
 		D4C0389D1A2BFF2300C262C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4C0388E1A2BFF2300C262C7 /* Either */;
+			target = D4C0388E1A2BFF2300C262C7 /* Either-Mac */;
 			targetProxy = D4C0389C1A2BFF2300C262C7 /* PBXContainerItemProxy */;
+		};
+		F8BB82071A939EA0001AA352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8BB81F91A939EA0001AA352 /* Either-iOS */;
+			targetProxy = F8BB82061A939EA0001AA352 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,11 +480,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Either;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -374,11 +503,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Either/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Either;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -390,6 +523,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -408,10 +542,107 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
 				);
 				INFOPLIST_FILE = EitherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8BB820E1A939EA0001AA352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Either/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Either;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8BB820F1A939EA0001AA352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Either/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Either;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8BB82111A939EA0001AA352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EitherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F8BB82121A939EA0001AA352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Either-eaadslcryzlcpaaxuskiptjrhbhe/Build/Products/Debug",
+				);
+				INFOPLIST_FILE = EitherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -427,7 +658,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either" */ = {
+		D4C038A51A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C038A61A2BFF2300C262C7 /* Debug */,
@@ -436,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "EitherTests" */ = {
+		D4C038A81A2BFF2300C262C7 /* Build configuration list for PBXNativeTarget "Either-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C038A91A2BFF2300C262C7 /* Debug */,
@@ -444,6 +675,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F8BB820D1A939EA0001AA352 /* Build configuration list for PBXNativeTarget "Either-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BB820E1A939EA0001AA352 /* Debug */,
+				F8BB820F1A939EA0001AA352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8BB82101A939EA0001AA352 /* Build configuration list for PBXNativeTarget "Either-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BB82111A939EA0001AA352 /* Debug */,
+				F8BB82121A939EA0001AA352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
