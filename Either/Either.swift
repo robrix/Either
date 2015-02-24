@@ -47,12 +47,12 @@ public enum Either<T, U>: EitherType, Printable {
 
 	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
 	public var left: T? {
-		return either(id, const(nil))
+		return either(unit, const(nil))
 	}
 
 	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
 	public var right: U? {
-		return either(const(nil), id)
+		return either(const(nil), unit)
 	}
 
 
@@ -83,7 +83,6 @@ infix operator >>- {
 	// Higher precedence than function application, but lower than function composition.
 	precedence 150
 }
-
 
 
 // MARK: - Imports
