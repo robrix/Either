@@ -79,11 +79,11 @@ public enum Either<T, U>: EitherType, Printable {
 
 // MARK: - Free functions
 
-/// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
+/// If `left` is `Either.Right`, extracts its value and passes it to `transform`, returning the result; otherwise transforms `either` into the return type.
 ///
 /// This is the bind or flat map operator, and is useful for chaining computations taking some parameter and returning an `Either`.
-public func >>- <T, U, V> (left: Either<T, U>, @noescape right: U -> Either<T, V>) -> Either<T, V> {
-	return left.either(ifLeft: Either<T, V>.left, ifRight: right)
+public func >>- <T, U, V> (either: Either<T, U>, @noescape transform: U -> Either<T, V>) -> Either<T, V> {
+	return either.flatMap(transform)
 }
 
 
