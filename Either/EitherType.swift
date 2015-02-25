@@ -16,7 +16,7 @@ public protocol EitherType {
 	static func right(value: Right) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
-	func either<Result>(f: Left -> Result, _ g: Right -> Result) -> Result
+	func either<Result>(@noescape #ifLeft: Left -> Result, @noescape ifRight: Right -> Result) -> Result
 }
 
 
@@ -24,7 +24,9 @@ public protocol EitherType {
 
 /// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
 public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
-	return lhs.either({ $0 == rhs.either(unit, const(nil)) }, { $0 == rhs.either(const(nil), unit) })
+	return lhs.either(
+		ifLeft: { $0 == rhs.either(ifLeft: unit, ifRight: const(nil)) },
+		ifRight: { $0 == rhs.either(ifLeft: const(nil), ifRight: unit) })
 }
 
 

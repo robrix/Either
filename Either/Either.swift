@@ -30,47 +30,60 @@ public enum Either<T, U>: EitherType, Printable {
 	// MARK: API
 
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
-	public func either<V>(f: T -> V, _ g: U -> V) -> V {
+	public func either<Result>(@noescape #ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
 		switch self {
 		case let .Left(x):
-			return f(x.value)
+			return ifLeft(x.value)
 		case let .Right(x):
-			return g(x.value)
+			return ifRight(x.value)
 		}
 	}
 
-	/// Maps `Right` instances with `f`, and returns `Left` instances as-is.
-	public func map<V>(f: U -> V) -> Either<T, V> {
-		return either(Either<T, V>.left, f >>> Either<T, V>.right)
+	/// Maps `Right` values with `transform`, and re-wraps `Left` values.
+	public func map<V>(@noescape transform: U -> V) -> Either<T, V> {
+		return flatMap { .right(transform($0)) }
+	}
+
+	/// Returns the result of applying `transform` to `Right` values, or re-wrapping `Left` values.
+	public func flatMap<V>(@noescape transform: U -> Either<T, V>) -> Either<T, V> {
+		return either(
+			ifLeft: Either<T, V>.left,
+			ifRight: transform)
 	}
 
 
 	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
 	public var left: T? {
-		return either(unit, const(nil))
+		return either(
+			ifLeft: unit,
+			ifRight: const(nil))
 	}
 
 	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
 	public var right: U? {
-		return either(const(nil), unit)
+		return either(
+			ifLeft: const(nil),
+			ifRight: unit)
 	}
 
 
 	// MARK: Printable
 
 	public var description: String {
-		return either({ ".Left(\($0))"}, { ".Right(\($0))" })
+		return either(
+			ifLeft: { ".Left(\($0))"},
+			ifRight: { ".Right(\($0))" })
 	}
 }
 
 
 // MARK: - Free functions
 
-/// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
+/// If `left` is `Either.Right`, extracts its value and passes it to `transform`, returning the result; otherwise transforms `either` into the return type.
 ///
 /// This is the bind or flat map operator, and is useful for chaining computations taking some parameter and returning an `Either`.
-public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Either<T, V> {
-	return left.either(Either<T, V>.left, right)
+public func >>- <T, U, V> (either: Either<T, U>, @noescape transform: U -> Either<T, V>) -> Either<T, V> {
+	return either.flatMap(transform)
 }
 
 
