@@ -30,7 +30,7 @@ public enum Either<T, U>: EitherType, Printable {
 	// MARK: API
 
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
-	public func either<Result>(#ifLeft: T -> Result, ifRight: U -> Result) -> Result {
+	public func either<Result>(@noescape #ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
 		switch self {
 		case let .Left(x):
 			return ifLeft(x.value)
@@ -40,7 +40,7 @@ public enum Either<T, U>: EitherType, Printable {
 	}
 
 	/// Maps `Right` instances with `f`, and returns `Left` instances as-is.
-	public func map<V>(f: U -> V) -> Either<T, V> {
+	public func map<V>(@noescape f: U -> V) -> Either<T, V> {
 		return either(ifLeft: Either<T, V>.left, ifRight: { .right(f($0)) })
 	}
 
@@ -75,7 +75,7 @@ public enum Either<T, U>: EitherType, Printable {
 /// If `left` is `Either.Right`, extracts its value and passes it to `right`, returning the result; otherwise transforms `left` into the return type.
 ///
 /// This is the bind or flat map operator, and is useful for chaining computations taking some parameter and returning an `Either`.
-public func >>- <T, U, V> (left: Either<T, U>, right: U -> Either<T, V>) -> Either<T, V> {
+public func >>- <T, U, V> (left: Either<T, U>, @noescape right: U -> Either<T, V>) -> Either<T, V> {
 	return left.either(ifLeft: Either<T, V>.left, ifRight: right)
 }
 
