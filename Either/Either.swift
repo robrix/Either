@@ -39,9 +39,9 @@ public enum Either<T, U>: EitherType, Printable {
 		}
 	}
 
-	/// Maps `Right` instances with `f`, and returns `Left` instances as-is.
-	public func map<V>(@noescape f: U -> V) -> Either<T, V> {
-		return either(ifLeft: Either<T, V>.left, ifRight: { .right(f($0)) })
+	/// Maps `Right` values with `transform`, and re-wraps `Left` values.
+	public func map<V>(@noescape transform: U -> V) -> Either<T, V> {
+		return either(ifLeft: Either<T, V>.left, ifRight: { .right(transform($0)) })
 	}
 
 
