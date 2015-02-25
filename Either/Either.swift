@@ -41,7 +41,7 @@ public enum Either<T, U>: EitherType, Printable {
 
 	/// Maps `Right` values with `transform`, and re-wraps `Left` values.
 	public func map<V>(@noescape transform: U -> V) -> Either<T, V> {
-		return either(ifLeft: Either<T, V>.left, ifRight: { .right(transform($0)) })
+		return flatMap { .right(transform($0)) }
 	}
 
 	/// Returns the result of applying `transform` to `Right` values, or re-wrapping `Left` values.
