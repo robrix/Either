@@ -16,12 +16,12 @@ final class EitherTests: XCTestCase {
 	// MARK: - either
 
 	func testEitherExtractsFromLeft() {
-		let value = left.either(id, count)
+		let value = left.either(ifLeft: id, ifRight: count)
 		XCTAssertEqual(value, 4)
 	}
 
 	func testEitherExtractsFromRight() {
-		let value = right.either(toString, id)
+		let value = right.either(ifLeft: toString, ifRight: id)
 		XCTAssertEqual(value, "four")
 	}
 
@@ -29,12 +29,12 @@ final class EitherTests: XCTestCase {
 	// MARK: - map
 
 	func testMapIgnoresLeftValues() {
-		let result = left.map(const(5)).either(id, id)
+		let result = left.map(const(5)).either(ifLeft: id, ifRight: id)
 		XCTAssertEqual(result, 4)
 	}
 
 	func testMapAppliesToRightValues() {
-		let result = right.map(const(5)).either(id, id)
+		let result = right.map(const(5)).either(ifLeft: id, ifRight: id)
 		XCTAssertEqual(result, 5)
 	}
 
@@ -42,12 +42,12 @@ final class EitherTests: XCTestCase {
 	// MARK: - >>-
 
 	func testFlatMapRetypesLeftValues() {
-		let result = (left >>- isFull).either(id, const(0))
+		let result = (left >>- isFull).either(ifLeft: id, ifRight: const(0))
 		XCTAssertEqual(result, 4)
 	}
 
 	func testFlatMapAppliesItsRightOperandToRightValues() {
-		let result = (right >>- isFull).either(const(false), id)
+		let result = (right >>- isFull).either(ifLeft: const(false), ifRight: id)
 		XCTAssert(result)
 	}
 }

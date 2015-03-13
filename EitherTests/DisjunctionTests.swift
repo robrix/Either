@@ -6,16 +6,16 @@ final class DisjunctionTests: XCTestCase {
 	}
 
 	func testAlternatesNonNilOperands() {
-		XCTAssert(((nil as Int?) ||| 1)?.either(unit, unit) == 1)
-		XCTAssert((1 ||| (nil as Int?))?.either(unit, unit) == 1)
-		XCTAssert((1 ||| 2)?.either(unit, unit) == 1)
+		XCTAssert(((nil as Int?) ||| 1)?.either(ifLeft: unit, ifRight: unit) == 1)
+		XCTAssert((1 ||| (nil as Int?))?.either(ifLeft: unit, ifRight: unit) == 1)
+		XCTAssert((1 ||| 2)?.either(ifLeft: unit, ifRight: unit) == 1)
 		XCTAssert(((nil as Int?) ||| (nil as Int?)) == nil)
 	}
 
 	func testShortCircuits() {
 		var effects = 0
 		let right = { ++effects }
-		XCTAssert((0 as Int? ||| right())?.either(unit, unit) == 0)
+		XCTAssert((0 as Int? ||| right())?.either(ifLeft: unit, ifRight: unit) == 0)
 		XCTAssertEqual(effects, 0)
 	}
 }
