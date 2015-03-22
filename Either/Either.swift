@@ -67,6 +67,14 @@ public enum Either<T, U>: EitherType, Printable {
 	}
 
 
+	public static func equals(#left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
+		return
+			(a.left &&& b.left).map(left)
+		??	(a.right &&& b.right).map(right)
+		??	false
+	}
+
+
 	// MARK: Printable
 
 	public var description: String {
