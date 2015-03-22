@@ -67,6 +67,7 @@ public enum Either<T, U>: EitherType, Printable {
 	}
 
 
+	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
 	public static func equals(#left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
 		return
 			(a.left &&& b.left).map(left)
