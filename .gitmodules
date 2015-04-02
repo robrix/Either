@@ -1,6 +1,6 @@
-[submodule "External/Box"]
-	path = External/Box
+[submodule "Carthage/Checkouts/Box"]
+	path = Carthage/Checkouts/Box
 	url = https://github.com/robrix/Box.git
-[submodule "External/Prelude"]
-	path = External/Prelude
+[submodule "Carthage/Checkouts/Prelude"]
+	path = Carthage/Checkouts/Prelude
 	url = https://github.com/robrix/Prelude.git
