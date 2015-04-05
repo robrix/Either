@@ -28,8 +28,8 @@ Representing success/failure:
 
 ```swift
 let result = someComputation() // result has type `Either<Error, T>`
-let success = result.either({ _ in nil }, { x in x }) // success has type `T?`
-let error = result.either({ x in x }, { _ in nil }) // error has type `Error?`
+let success = result.right // success has type `T?`
+let error = result.left    // error has type `Error?`
 ```
 
 However, you might instead prefer to use a [more tailored `Result`](https://github.com/LlamaKit/LlamaKit) type. Even if it doesn’t conform to `EitherType` already, you can implement conformance in your application:
