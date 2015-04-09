@@ -32,7 +32,7 @@ let success = result.right // success has type `T?`
 let error = result.left    // error has type `Error?`
 ```
 
-However, you might instead prefer to use a [more tailored `Result`](https://github.com/LlamaKit/LlamaKit) type. Even if it doesn’t conform to `EitherType` already, you can implement conformance in your application:
+However, you might instead prefer to use a [more tailored `Result`](https://github.com/antitypical/Result) type. Even if it doesn’t conform to `EitherType` already, you can implement conformance in your application:
 
 ```swift
 extension Result: EitherType { // Result<T, Error>
