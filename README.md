@@ -21,7 +21,7 @@ Extracting the value:
 
 ```swift
 // Unwrap:
-let value = left.either({ x in x }, { string in countElements(string) })
+let value = left.either(ifLeft: { x in x }, ifRight: { string in countElements(string) })
 ```
 
 Representing success/failure:
