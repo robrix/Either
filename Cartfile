@@ -1,2 +1,2 @@
-github "robrix/Box" "18d05a5"
-github "robrix/Prelude" "180e9ae"
+github "robrix/Box" ~> 1.2.2
+github "robrix/Prelude" ~> 1.5.0
