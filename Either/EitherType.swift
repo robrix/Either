@@ -21,10 +21,12 @@ public protocol EitherType {
 
 
 extension EitherType {
+	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
 	public var left: LeftType? {
 		return either(ifLeft: unit, ifRight: const(nil))
 	}
 
+	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
 	public var right: RightType? {
 		return either(ifLeft: const(nil), ifRight: unit)
 	}
