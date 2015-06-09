@@ -30,7 +30,7 @@ public enum Either<T, U>: EitherType, Printable {
 	// MARK: API
 
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
-	public func either<Result>(@noescape #ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
+	public func either<Result>(@noescape ifLeft ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
 		switch self {
 		case let .Left(x):
 			return ifLeft(x.value)
@@ -68,7 +68,7 @@ public enum Either<T, U>: EitherType, Printable {
 
 
 	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
-	public static func equals(#left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
+	public static func equals(left left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
 		return
 			(a.left &&& b.left).map(left)
 		??	(a.right &&& b.right).map(right)
