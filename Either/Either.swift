@@ -5,9 +5,9 @@
 /// By convention, and where applicable, `Left` is used to indicate failure, while `Right` is used to indicate success. (Mnemonic: “right” is a synonym for “correct.”)
 ///
 /// Otherwise, it is implied that `Left` and `Right` are effectively unordered alternatives of equal standing.
-public enum Either<T, U>: EitherType, Printable {
-	case Left(Box<T>)
-	case Right(Box<U>)
+public enum Either<T, U>: EitherType, CustomStringConvertible {
+	case Left(T)
+	case Right(U)
 
 
 	// MARK: Lifecycle
@@ -16,26 +16,26 @@ public enum Either<T, U>: EitherType, Printable {
 	///
 	/// Suitable for partial application.
 	public static func left(value: T) -> Either {
-		return Left(Box(value))
+		return Left(value)
 	}
 
 	/// Constructs a `Right`.
 	///
 	/// Suitable for partial application.
 	public static func right(value: U) -> Either {
-		return Right(Box(value))
+		return Right(value)
 	}
 
 
 	// MARK: API
 
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
-	public func either<Result>(@noescape #ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
+	public func either<Result>(@noescape ifLeft ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
 		switch self {
 		case let .Left(x):
-			return ifLeft(x.value)
+			return ifLeft(x)
 		case let .Right(x):
-			return ifRight(x.value)
+			return ifRight(x)
 		}
 	}
 
@@ -68,7 +68,7 @@ public enum Either<T, U>: EitherType, Printable {
 
 
 	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
-	public static func equals(#left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
+	public static func equals(left left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
 		return
 			(a.left &&& b.left).map(left)
 		??	(a.right &&& b.right).map(right)
@@ -109,5 +109,4 @@ infix operator >>- {
 
 // MARK: - Imports
 
-import Box
 import Prelude

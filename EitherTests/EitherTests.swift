@@ -8,10 +8,6 @@ final class EitherTests: XCTestCase {
 	let left = Either<Int, String>.left(4)
 	let right = Either<Int, String>.right("four")
 
-	func isFull<T>(string: String) -> Either<T, Bool> {
-		return .right(!string.isEmpty)
-	}
-
 
 	// MARK: - either
 
@@ -50,4 +46,17 @@ final class EitherTests: XCTestCase {
 		let result = (right >>- isFull).either(ifLeft: const(false), ifRight: id)
 		XCTAssert(result)
 	}
+}
+
+
+private func isFull<T>(string: String) -> Either<T, Bool> {
+	return .right(!string.isEmpty)
+}
+
+func toString<T>(x: T) -> String {
+	return String(x)
+}
+
+func count(string: String) -> Int {
+	return string.characters.count
 }

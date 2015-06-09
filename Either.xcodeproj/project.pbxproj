@@ -9,19 +9,16 @@
 /* Begin PBXBuildFile section */
 		D456ADDA1A944DF4002E3542 /* Disjunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADD91A944DF4002E3542 /* Disjunction.swift */; };
 		D456ADDC1A944FBA002E3542 /* DisjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */; };
+		D47940871B2694A100D3962E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47940861B2694A100D3962E /* CoreFoundation.framework */; };
 		D4C038951A2BFF2300C262C7 /* Either.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C038941A2BFF2300C262C7 /* Either.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0388F1A2BFF2300C262C7 /* Either.framework */; };
 		D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038A11A2BFF2300C262C7 /* EitherTests.swift */; };
 		D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B31A2C00BB00C262C7 /* Either.swift */; };
 		D4C038B61A2C012000C262C7 /* EitherType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C038B51A2C012000C262C7 /* EitherType.swift */; };
 		D4E7A7F11A2CCB800080A4DF /* EitherTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */; };
-		D4EC3EF31A9457570080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
 		D4EC3EF41A9457570080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
-		D4EC3EF51A94576F0080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
 		D4EC3EF61A94576F0080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
-		D4EC3EF71A94577B0080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
 		D4EC3EF81A94577B0080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
-		D4EC3EF91A9457800080B23E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF11A9457570080B23E /* Box.framework */; };
 		D4EC3EFA1A9457800080B23E /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EC3EF21A9457570080B23E /* Prelude.framework */; };
 		D4EC3EFB1A9457840080B23E /* Disjunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADD91A944DF4002E3542 /* Disjunction.swift */; };
 		D4EC3EFC1A9457890080B23E /* DisjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */; };
@@ -51,6 +48,7 @@
 /* Begin PBXFileReference section */
 		D456ADD91A944DF4002E3542 /* Disjunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disjunction.swift; sourceTree = "<group>"; };
 		D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisjunctionTests.swift; sourceTree = "<group>"; };
+		D47940861B2694A100D3962E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		D4C0388F1A2BFF2300C262C7 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C038931A2BFF2300C262C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C038941A2BFF2300C262C7 /* Either.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Either.h; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 		D4C038B31A2C00BB00C262C7 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		D4C038B51A2C012000C262C7 /* EitherType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherType.swift; sourceTree = "<group>"; };
 		D4E7A7F01A2CCB800080A4DF /* EitherTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EitherTypeTests.swift; sourceTree = "<group>"; };
-		D4EC3EF11A9457570080B23E /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Box.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4EC3EF21A9457570080B23E /* Prelude.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB81FA1A939EA0001AA352 /* Either.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Either.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BB82041A939EA0001AA352 /* Either-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Either-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4EC3EF31A9457570080B23E /* Box.framework in Frameworks */,
+				D47940871B2694A100D3962E /* CoreFoundation.framework in Frameworks */,
 				D4EC3EF41A9457570080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C0389B1A2BFF2300C262C7 /* Either.framework in Frameworks */,
-				D4EC3EF71A94577B0080B23E /* Box.framework in Frameworks */,
 				D4EC3EF81A94577B0080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4EC3EF51A94576F0080B23E /* Box.framework in Frameworks */,
 				D4EC3EF61A94576F0080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +95,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8BB82051A939EA0001AA352 /* Either.framework in Frameworks */,
-				D4EC3EF91A9457800080B23E /* Box.framework in Frameworks */,
 				D4EC3EFA1A9457800080B23E /* Prelude.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +137,7 @@
 		D4C038921A2BFF2300C262C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D4EC3EF11A9457570080B23E /* Box.framework */,
+				D47940861B2694A100D3962E /* CoreFoundation.framework */,
 				D4EC3EF21A9457570080B23E /* Prelude.framework */,
 				D4C038931A2BFF2300C262C7 /* Info.plist */,
 			);
@@ -269,7 +263,8 @@
 		D4C038861A2BFF2300C262C7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rob Rix";
 				TargetAttributes = {
 					D4C0388E1A2BFF2300C262C7 = {
@@ -411,7 +406,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -430,6 +427,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -457,6 +455,7 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,6 +468,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

@@ -5,5 +5,6 @@ xcuserdata
 *.pbxuser
 *.xcuserdatad
 *.xccheckout
+*.xcscmblueprint
 
 Carthage/Build

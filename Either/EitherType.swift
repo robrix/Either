@@ -6,24 +6,37 @@
 ///
 /// Otherwise it is implied that `Left` and `Right` are effectively unordered.
 public protocol EitherType {
-	typealias Left
-	typealias Right
+	typealias LeftType
+	typealias RightType
 
 	/// Constructs a `Left` instance.
-	static func left(value: Left) -> Self
+	static func left(value: LeftType) -> Self
 
 	/// Constructs a `Right` instance.
-	static func right(value: Right) -> Self
+	static func right(value: RightType) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
-	func either<Result>(@noescape #ifLeft: Left -> Result, @noescape ifRight: Right -> Result) -> Result
+	func either<Result>(@noescape ifLeft ifLeft: LeftType -> Result, @noescape ifRight: RightType -> Result) -> Result
+}
+
+
+extension EitherType {
+	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
+	public var left: LeftType? {
+		return either(ifLeft: unit, ifRight: const(nil))
+	}
+
+	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
+	public var right: RightType? {
+		return either(ifLeft: const(nil), ifRight: unit)
+	}
 }
 
 
 // MARK: API
 
 /// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
-public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
+public func == <E: EitherType where E.LeftType: Equatable, E.RightType: Equatable> (lhs: E, rhs: E) -> Bool {
 	return lhs.either(
 		ifLeft: { $0 == rhs.either(ifLeft: unit, ifRight: const(nil)) },
 		ifRight: { $0 == rhs.either(ifLeft: const(nil), ifRight: unit) })
@@ -31,7 +44,7 @@ public func == <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs:
 
 
 /// Inequality over `EitherType` where `Left` & `Right` : `Equatable`.
-public func != <E: EitherType where E.Left: Equatable, E.Right: Equatable> (lhs: E, rhs: E) -> Bool {
+public func != <E: EitherType where E.LeftType: Equatable, E.RightType: Equatable> (lhs: E, rhs: E) -> Bool {
 	return !(lhs == rhs)
 }
 
