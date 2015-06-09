@@ -20,6 +20,17 @@ public protocol EitherType {
 }
 
 
+extension EitherType {
+	public var left: LeftType? {
+		return either(ifLeft: unit, ifRight: const(nil))
+	}
+
+	public var right: RightType? {
+		return either(ifLeft: const(nil), ifRight: unit)
+	}
+}
+
+
 // MARK: API
 
 /// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
