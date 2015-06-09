@@ -51,3 +51,12 @@ final class EitherTests: XCTestCase {
 		XCTAssert(result)
 	}
 }
+
+
+func toString<T>(x: T) -> String {
+	return String(x)
+}
+
+func count(string: String) -> Int {
+	return string.characters.count
+}
