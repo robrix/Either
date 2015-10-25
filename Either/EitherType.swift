@@ -16,7 +16,7 @@ public protocol EitherType {
 	static func right(value: RightType) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
-	func either<Result>(@noescape ifLeft ifLeft: LeftType -> Result, @noescape ifRight: RightType -> Result) -> Result
+	func either<Result>(@noescape ifLeft ifLeft: LeftType throws -> Result, @noescape ifRight: RightType throws -> Result) rethrows -> Result
 }
 
 
