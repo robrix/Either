@@ -30,12 +30,12 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 	// MARK: API
 
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
-	public func either<Result>(@noescape ifLeft ifLeft: T -> Result, @noescape ifRight: U -> Result) -> Result {
+	public func either<Result>(@noescape ifLeft ifLeft: T throws -> Result, @noescape ifRight: U throws -> Result) rethrows -> Result {
 		switch self {
 		case let .Left(x):
-			return ifLeft(x)
+			return try ifLeft(x)
 		case let .Right(x):
-			return ifRight(x)
+			return try ifRight(x)
 		}
 	}
 
