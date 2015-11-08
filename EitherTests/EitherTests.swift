@@ -35,6 +35,19 @@ final class EitherTests: XCTestCase {
 	}
 
 
+	// MARK: - mapLeft
+
+	func testMapLeftIgnoresRightValues() {
+		let result = right.mapLeft(const("five")).either(ifLeft: id, ifRight: id)
+		XCTAssertEqual(result, "four")
+	}
+
+	func testMapLeftAppliesToLeftValues() {
+		let result = left.mapLeft(const("five")).either(ifLeft: id, ifRight: id)
+		XCTAssertEqual(result, "five")
+	}
+
+
 	// MARK: - >>-
 
 	func testFlatMapRetypesLeftValues() {
