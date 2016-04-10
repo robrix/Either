@@ -6,8 +6,8 @@
 ///
 /// Otherwise it is implied that `Left` and `Right` are effectively unordered.
 public protocol EitherType {
-	typealias LeftType
-	typealias RightType
+	associatedtype LeftType
+	associatedtype RightType
 
 	/// Constructs a `Left` instance.
 	static func left(value: LeftType) -> Self
