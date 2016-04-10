@@ -80,11 +80,12 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 
 
 	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
-	public static func equals(left left: (T, T) -> Bool, right: (U, U) -> Bool)(_ a: Either<T, U>, _ b: Either<T, U>) -> Bool {
-		return
-			(a.left &&& b.left).map(left)
-		??	(a.right &&& b.right).map(right)
-		??	false
+	public static func equals(left left: (T, T) -> Bool, right: (U, U) -> Bool) -> (Either<T, U>, Either<T, U>) -> Bool {
+		return { a, b in
+				(a.left &&& b.left).map(left)
+			??	(a.right &&& b.right).map(right)
+			??	false
+		}
 	}
 
 
