@@ -14,7 +14,10 @@ final class DisjunctionTests: XCTestCase {
 
 	func testShortCircuits() {
 		var effects = 0
-		let right = { ++effects }
+		let right: () -> Int? = {
+			effects += 1
+			return effects
+		}
 		XCTAssert((0 as Int? ||| right())?.either(ifLeft: unit, ifRight: unit) == 0)
 		XCTAssertEqual(effects, 0)
 	}
