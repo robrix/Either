@@ -6,8 +6,8 @@
 ///
 /// Otherwise, it is implied that `Left` and `Right` are effectively unordered alternatives of equal standing.
 public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomStringConvertible {
-	case Left(T)
-	case Right(U)
+	case left(T)
+	case right(U)
 
 
 	// MARK: Lifecycle
@@ -15,15 +15,15 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 	/// Constructs a `Left`.
 	///
 	/// Suitable for partial application.
-	public static func left(_ value: T) -> Either {
-		return Left(value)
+	public static func with(left value: T) -> Either {
+		return .left(value)
 	}
 
 	/// Constructs a `Right`.
 	///
 	/// Suitable for partial application.
-	public static func right(_ value: U) -> Either {
-		return Right(value)
+	public static func with(right value: U) -> Either {
+		return .right(value)
 	}
 
 
@@ -32,9 +32,9 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 	/// Returns the result of applying `f` to the value of `Left`, or `g` to the value of `Right`.
 	public func either<Result>(ifLeft: (T) throws -> Result, ifRight: (U) throws -> Result) rethrows -> Result {
 		switch self {
-		case let .Left(x):
+		case let .left(x):
 			return try ifLeft(x)
-		case let .Right(x):
+		case let .right(x):
 			return try ifRight(x)
 		}
 	}

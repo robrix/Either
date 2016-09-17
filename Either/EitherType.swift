@@ -10,10 +10,10 @@ public protocol EitherType {
 	associatedtype RightType
 
 	/// Constructs a `Left` instance.
-	static func left(_ value: LeftType) -> Self
+	static func with(left: LeftType) -> Self
 
 	/// Constructs a `Right` instance.
-	static func right(_ value: RightType) -> Self
+	static func with(right: RightType) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
 	func either<Result>(ifLeft: (LeftType) throws -> Result, ifRight: (RightType) throws -> Result) rethrows -> Result
