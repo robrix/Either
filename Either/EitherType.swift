@@ -10,13 +10,13 @@ public protocol EitherType {
 	associatedtype RightType
 
 	/// Constructs a `Left` instance.
-	static func left(value: LeftType) -> Self
+	static func with(left: LeftType) -> Self
 
 	/// Constructs a `Right` instance.
-	static func right(value: RightType) -> Self
+	static func with(right: RightType) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
-	func either<Result>(@noescape ifLeft ifLeft: LeftType throws -> Result, @noescape ifRight: RightType throws -> Result) rethrows -> Result
+	func either<Result>(ifLeft: (LeftType) throws -> Result, ifRight: (RightType) throws -> Result) rethrows -> Result
 }
 
 
@@ -35,17 +35,16 @@ extension EitherType {
 
 // MARK: API
 
-/// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
-public func == <E: EitherType where E.LeftType: Equatable, E.RightType: Equatable> (lhs: E, rhs: E) -> Bool {
-	return lhs.either(
-		ifLeft: { $0 == rhs.either(ifLeft: unit, ifRight: const(nil)) },
-		ifRight: { $0 == rhs.either(ifLeft: const(nil), ifRight: unit) })
-}
-
-
-/// Inequality over `EitherType` where `Left` & `Right` : `Equatable`.
-public func != <E: EitherType where E.LeftType: Equatable, E.RightType: Equatable> (lhs: E, rhs: E) -> Bool {
-	return !(lhs == rhs)
+extension EitherType where LeftType: Equatable, RightType: Equatable {
+	/// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
+	public static func == (lhs: Self, rhs: Self) -> Bool {
+		return lhs.left == rhs.left && lhs.right == rhs.right
+	}
+	
+	/// Inequality over `EitherType` where `Left` & `Right` : `Equatable`.
+	public static func != (lhs: Self, rhs: Self) -> Bool {
+		return !(lhs == rhs)
+	}
 }
 
 

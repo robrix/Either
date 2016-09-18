@@ -67,7 +67,7 @@ private func isFull<T>(string: String) -> Either<T, Bool> {
 }
 
 func toString<T>(x: T) -> String {
-	return String(x)
+	return String(describing: x)
 }
 
 func count(string: String) -> Int {
