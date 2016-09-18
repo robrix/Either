@@ -1,1 +1,1 @@
-github "robrix/Prelude" "master"
+github "robrix/Prelude" ~> 1.7
