@@ -120,14 +120,15 @@ public func >>- <T, U, V> (either: Either<T, U>, transform: (U) -> Either<T, V>)
 
 // MARK: - Operators
 
-infix operator >>- {
+precedencegroup Bind {
 	// Left-associativity so that chaining works like you’d expect, and for consistency with Haskell, Runes, swiftz, etc.
-	associativity left
-
-	// Higher precedence than function application, but lower than function composition.
-	precedence 100
+	associativity: left
+	
+	higherThan: Application
+	lowerThan: Composition
 }
 
+infix operator >>- : Bind
 
 // MARK: - Imports
 

@@ -12,10 +12,5 @@ public func ||| <T, U> (left: T?, right: @autoclosure () -> U?) -> Either<T, U>?
 
 // MARK: - Operators
 
-infix operator ||| {
-	/// Same associativity as ||.
-	associativity left
-
-	/// Same precedence as ||.
-	precedence 110
-}
+/// Same associativity and precedence as ||
+infix operator ||| : LogicalConjunctionPrecedence
