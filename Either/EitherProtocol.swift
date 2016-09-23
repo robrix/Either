@@ -35,10 +35,21 @@ extension EitherProtocol {
 
 // MARK: API
 
+extension EitherProtocol {
+	/// Given equivalent functions for `Left` and `Right`, returns an equivalent function for `EitherProtocol`.
+	public static func equivalence(left: @escaping (Left, Left) -> Bool, right: @escaping (Right, Right) -> Bool) -> (Self, Self) -> Bool {
+		return { a, b in
+			(a.left &&& b.left).map(left)
+				??	(a.right &&& b.right).map(right)
+				??	false
+		}
+	}
+}
+
 extension EitherProtocol where Left: Equatable, Right: Equatable {
 	/// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
 	public static func == (lhs: Self, rhs: Self) -> Bool {
-		return lhs.left == rhs.left && lhs.right == rhs.right
+		return Self.equivalence(left: ==, right: ==)(lhs, rhs)
 	}
 	
 	/// Inequality over `EitherType` where `Left` & `Right` : `Equatable`.

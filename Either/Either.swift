@@ -64,16 +64,6 @@ public enum Either<T, U>: EitherProtocol, CustomDebugStringConvertible, CustomSt
 	}
 
 
-	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
-	public static func equals(left: @escaping (T, T) -> Bool, right: @escaping (U, U) -> Bool) -> (Either<T, U>, Either<T, U>) -> Bool {
-		return { a, b in
-				(a.left &&& b.left).map(left)
-			??	(a.right &&& b.right).map(right)
-			??	false
-		}
-	}
-
-
 	// MARK: CustomDebugStringConvertible
 
 	public var debugDescription: String {
