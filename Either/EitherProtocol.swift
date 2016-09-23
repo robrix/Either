@@ -10,10 +10,10 @@ public protocol EitherProtocol {
 	associatedtype Right
 
 	/// Constructs a `Left` instance.
-	static func with(left: Left) -> Self
+	static func toLeft(_ value: Left) -> Self
 
 	/// Constructs a `Right` instance.
-	static func with(right: Right) -> Self
+	static func toRight(_ value: Right) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
 	func either<Result>(ifLeft: (Left) throws -> Result, ifRight: (Right) throws -> Result) rethrows -> Result

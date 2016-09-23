@@ -15,14 +15,14 @@ public enum Either<T, U>: EitherProtocol, CustomDebugStringConvertible, CustomSt
 	/// Constructs a `Left`.
 	///
 	/// Suitable for partial application.
-	public static func with(left value: T) -> Either {
+	public static func toLeft(_ value: T) -> Either {
 		return .left(value)
 	}
 
 	/// Constructs a `Right`.
 	///
 	/// Suitable for partial application.
-	public static func with(right value: U) -> Either {
+	public static func toRight(_ value: U) -> Either {
 		return .right(value)
 	}
 

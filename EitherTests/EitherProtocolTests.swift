@@ -3,7 +3,7 @@
 import Either
 import XCTest
 
-final class EitherTypeTests: XCTestCase {
+final class EitherProtocolTests: XCTestCase {
 	func testEqualityOverLeft() {
 		XCTAssertTrue(Either<Int, Int>.left(1) == Either<Int, Int>.left(1))
 		XCTAssertFalse(Either<Int, Int>.left(1) == Either<Int, Int>.left(2))
