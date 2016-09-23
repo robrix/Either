@@ -5,7 +5,7 @@
 /// By convention, and where applicable, `Left` is used to indicate failure, while `Right` is used to indicate success. (Mnemonic: “right” is a synonym for “correct.”)
 ///
 /// Otherwise, it is implied that `Left` and `Right` are effectively unordered alternatives of equal standing.
-public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomStringConvertible {
+public enum Either<T, U>: EitherProtocol, CustomDebugStringConvertible, CustomStringConvertible {
 	case left(T)
 	case right(U)
 

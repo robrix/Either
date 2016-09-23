@@ -5,29 +5,29 @@
 /// By convention, and where applicable, `Left` is used to indicate failure, while `Right` is to indicate success. (Mnemonic: “right is right,” i.e. “right” is a synonym for “correct.”)
 ///
 /// Otherwise it is implied that `Left` and `Right` are effectively unordered.
-public protocol EitherType {
-	associatedtype LeftType
-	associatedtype RightType
+public protocol EitherProtocol {
+	associatedtype Left
+	associatedtype Right
 
 	/// Constructs a `Left` instance.
-	static func with(left: LeftType) -> Self
+	static func with(left: Left) -> Self
 
 	/// Constructs a `Right` instance.
-	static func with(right: RightType) -> Self
+	static func with(right: Right) -> Self
 
 	/// Returns the result of applying `f` to `Left` values, or `g` to `Right` values.
-	func either<Result>(ifLeft: (LeftType) throws -> Result, ifRight: (RightType) throws -> Result) rethrows -> Result
+	func either<Result>(ifLeft: (Left) throws -> Result, ifRight: (Right) throws -> Result) rethrows -> Result
 }
 
 
-extension EitherType {
+extension EitherProtocol {
 	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
-	public var left: LeftType? {
+	public var left: Left? {
 		return either(ifLeft: unit, ifRight: const(nil))
 	}
 
 	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
-	public var right: RightType? {
+	public var right: Right? {
 		return either(ifLeft: const(nil), ifRight: unit)
 	}
 }
@@ -35,7 +35,7 @@ extension EitherType {
 
 // MARK: API
 
-extension EitherType where LeftType: Equatable, RightType: Equatable {
+extension EitherProtocol where Left: Equatable, Right: Equatable {
 	/// Equality (tho not `Equatable`) over `EitherType` where `Left` & `Right` : `Equatable`.
 	public static func == (lhs: Self, rhs: Self) -> Bool {
 		return lhs.left == rhs.left && lhs.right == rhs.right
