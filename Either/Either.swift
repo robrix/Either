@@ -64,21 +64,6 @@ public enum Either<T, U>: EitherProtocol, CustomDebugStringConvertible, CustomSt
 	}
 
 
-	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
-	public var left: T? {
-		return either(
-			ifLeft: unit,
-			ifRight: const(nil))
-	}
-
-	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
-	public var right: U? {
-		return either(
-			ifLeft: const(nil),
-			ifRight: unit)
-	}
-
-
 	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
 	public static func equals(left: @escaping (T, T) -> Bool, right: @escaping (U, U) -> Bool) -> (Either<T, U>, Either<T, U>) -> Bool {
 		return { a, b in
