@@ -23,12 +23,22 @@ public protocol EitherProtocol {
 extension EitherProtocol {
 	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
 	public var left: Left? {
-		return either(ifLeft: unit, ifRight: const(nil))
+		return either(ifLeft: Optional<Left>.some, ifRight: const(nil))
 	}
 
 	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
 	public var right: Right? {
-		return either(ifLeft: const(nil), ifRight: unit)
+		return either(ifLeft: const(nil), ifRight: Optional<Right>.some)
+	}
+	
+	/// Returns true of `Left` instances, or false for `Right` instances.
+	public var isLeft: Bool {
+		return either(ifLeft: const(true), ifRight: const(false))
+	}
+	
+	/// Returns true of `Right` instances, or false for `Left` instances.
+	public var isRight: Bool {
+		return either(ifLeft: const(false), ifRight: const(true))
 	}
 }
 
