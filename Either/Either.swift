@@ -87,6 +87,13 @@ extension Either {
 			ifLeft: transform,
 			ifRight: Either<V, U>.right)
 	}
+	
+	/// Maps `Left` values with `left` & maps `Right` values with `right`.
+	public func bimap<V, W>(leftBy lf: (T) -> V, rightBy rf: (U) -> W) -> Either<V, W> {
+		return either(
+			ifLeft: { .left(lf($0)) },
+			ifRight: { .right(rf($0)) })
+	}
 }
 
 // MARK: - Operators
