@@ -5,7 +5,7 @@
 /// By convention, and where applicable, `Left` is used to indicate failure, while `Right` is used to indicate success. (Mnemonic: “right” is a synonym for “correct.”)
 ///
 /// Otherwise, it is implied that `Left` and `Right` are effectively unordered alternatives of equal standing.
-public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomStringConvertible {
+public enum Either<T, U>: EitherProtocol, CustomDebugStringConvertible, CustomStringConvertible {
 	case left(T)
 	case right(U)
 
@@ -15,14 +15,14 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 	/// Constructs a `Left`.
 	///
 	/// Suitable for partial application.
-	public static func with(left value: T) -> Either {
+	public static func toLeft(_ value: T) -> Either {
 		return .left(value)
 	}
 
 	/// Constructs a `Right`.
 	///
 	/// Suitable for partial application.
-	public static func with(right value: U) -> Either {
+	public static func toRight(_ value: U) -> Either {
 		return .right(value)
 	}
 
@@ -61,31 +61,6 @@ public enum Either<T, U>: EitherType, CustomDebugStringConvertible, CustomString
 		return either(
 			ifLeft: transform,
 			ifRight: Either<V, U>.right)
-	}
-
-
-	/// Returns the value of `Left` instances, or `nil` for `Right` instances.
-	public var left: T? {
-		return either(
-			ifLeft: unit,
-			ifRight: const(nil))
-	}
-
-	/// Returns the value of `Right` instances, or `nil` for `Left` instances.
-	public var right: U? {
-		return either(
-			ifLeft: const(nil),
-			ifRight: unit)
-	}
-
-
-	/// Given equality functions for `T` and `U`, returns an equality function for `Either<T, U>`.
-	public static func equals(left: @escaping (T, T) -> Bool, right: @escaping (U, U) -> Bool) -> (Either<T, U>, Either<T, U>) -> Bool {
-		return { a, b in
-				(a.left &&& b.left).map(left)
-			??	(a.right &&& b.right).map(right)
-			??	false
-		}
 	}
 
 
