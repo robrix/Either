@@ -46,6 +46,27 @@ final class EitherTests: XCTestCase {
 		let result = left.mapLeft(const("five")).either(ifLeft: id, ifRight: id)
 		XCTAssertEqual(result, "five")
 	}
+	
+	
+	// MARK: - bimap
+	
+	func testBimapAppliesToBetterValues() {
+		var result: Either<Int, String>
+		
+		result = right.bimap(leftBy: { $0 + 1 }, rightBy: const("Five"))
+		guard let str = result.right else {
+			XCTFail()
+			return
+		}
+		XCTAssertEqual(str, "Five")
+		
+		result = left.bimap(leftBy: { $0 + 1 }, rightBy: const("Five"))
+		guard let int = result.left else {
+			XCTFail()
+			return
+		}
+		XCTAssertEqual(int, 5)
+	}
 
 
 	// MARK: - >>-
