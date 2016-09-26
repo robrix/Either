@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8413F8DA1D96951300025F4F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F8D91D96951300025F4F /* Extension.swift */; };
+		8413F8DB1D96951300025F4F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F8D91D96951300025F4F /* Extension.swift */; };
+		8413F8DD1D969B3700025F4F /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F8DC1D969B3700025F4F /* ExtensionTests.swift */; };
+		8413F8DE1D969B3700025F4F /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8413F8DC1D969B3700025F4F /* ExtensionTests.swift */; };
 		D456ADDA1A944DF4002E3542 /* Disjunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADD91A944DF4002E3542 /* Disjunction.swift */; };
 		D456ADDC1A944FBA002E3542 /* DisjunctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */; };
 		D47940871B2694A100D3962E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47940861B2694A100D3962E /* CoreFoundation.framework */; };
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8413F8D91D96951300025F4F /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8413F8DC1D969B3700025F4F /* ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		D456ADD91A944DF4002E3542 /* Disjunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disjunction.swift; sourceTree = "<group>"; };
 		D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisjunctionTests.swift; sourceTree = "<group>"; };
 		D47940861B2694A100D3962E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +135,7 @@
 				D4C038B31A2C00BB00C262C7 /* Either.swift */,
 				D4C038B51A2C012000C262C7 /* EitherProtocol.swift */,
 				D456ADD91A944DF4002E3542 /* Disjunction.swift */,
+				8413F8D91D96951300025F4F /* Extension.swift */,
 				D4C038921A2BFF2300C262C7 /* Supporting Files */,
 			);
 			path = Either;
@@ -150,6 +157,7 @@
 				D4C038A11A2BFF2300C262C7 /* EitherTests.swift */,
 				D4E7A7F01A2CCB800080A4DF /* EitherProtocolTests.swift */,
 				D456ADDB1A944FBA002E3542 /* DisjunctionTests.swift */,
+				8413F8DC1D969B3700025F4F /* ExtensionTests.swift */,
 				D4C0389F1A2BFF2300C262C7 /* Supporting Files */,
 			);
 			path = EitherTests;
@@ -340,6 +348,7 @@
 				D4C038B61A2C012000C262C7 /* EitherProtocol.swift in Sources */,
 				D4C038B41A2C00BB00C262C7 /* Either.swift in Sources */,
 				D456ADDA1A944DF4002E3542 /* Disjunction.swift in Sources */,
+				8413F8DA1D96951300025F4F /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +359,7 @@
 				D4E7A7F11A2CCB800080A4DF /* EitherProtocolTests.swift in Sources */,
 				D4EC3EFC1A9457890080B23E /* DisjunctionTests.swift in Sources */,
 				D4C038A21A2BFF2300C262C7 /* EitherTests.swift in Sources */,
+				8413F8DD1D969B3700025F4F /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +370,7 @@
 				F8BB82181A939F6C001AA352 /* EitherProtocol.swift in Sources */,
 				F8BB82171A939F6C001AA352 /* Either.swift in Sources */,
 				D4EC3EFB1A9457840080B23E /* Disjunction.swift in Sources */,
+				8413F8DB1D96951300025F4F /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D456ADDC1A944FBA002E3542 /* DisjunctionTests.swift in Sources */,
+				8413F8DE1D969B3700025F4F /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
