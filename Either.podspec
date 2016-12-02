@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.summary          = 'Swift µframework of Either, which represents two alternatives.'
   spec.source           = { :git => 'https://github.com/robrix/Either.git', :tag => spec.version.to_s }
   spec.source_files     = 'Either/*.swift'
-  spec.dependency       'Prelude', '~> 1.6.0'
+  spec.dependency       'Prelude', '~> 3.0.0'
   spec.requires_arc     = true
   spec.ios.deployment_target = "8.0"
   spec.osx.deployment_target = "10.9"

@@ -102,7 +102,7 @@ precedencegroup Bind {
 	// Left-associativity so that chaining works like you’d expect, and for consistency with Haskell, Runes, swiftz, etc.
 	associativity: left
 	
-	higherThan: Application
+	higherThan: ForwardApplication
 	lowerThan: Composition
 }
 
