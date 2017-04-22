@@ -12,12 +12,12 @@ final class EitherTests: XCTestCase {
 	// MARK: - either
 
 	func testEitherExtractsFromLeft() {
-		let value = left.either(ifLeft: id, ifRight: count)
+		let value = left.either(ifLeft: id, ifRight: const(0))
 		XCTAssertEqual(value, 4)
 	}
 
 	func testEitherExtractsFromRight() {
-		let value = right.either(ifLeft: toString, ifRight: id)
+		let value = right.either(ifLeft: const(""), ifRight: id)
 		XCTAssertEqual(value, "four")
 	}
 
@@ -85,12 +85,4 @@ final class EitherTests: XCTestCase {
 
 private func isFull<T>(string: String) -> Either<T, Bool> {
 	return .right(!string.isEmpty)
-}
-
-func toString<T>(x: T) -> String {
-	return String(describing: x)
-}
-
-func count(string: String) -> Int {
-	return string.characters.count
 }
