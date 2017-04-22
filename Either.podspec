@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'Either'
-  spec.version          = '1.3.1'
+  spec.version          = '2.1.0'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage         = 'https://github.com/robrix/Either'
   spec.authors          = { 'Rob Rix' => 'rob.rix@github.com' }
