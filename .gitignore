@@ -8,3 +8,5 @@ xcuserdata
 *.xcscmblueprint
 
 Carthage/Build
+.build/
+.idea/
