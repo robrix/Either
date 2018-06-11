@@ -66,3 +66,18 @@ API documentation is in the source.
 2. Drag `Either.xcodeproj` into your project or workspace, and do the same with its dependencies (i.e. the other `.xcodeproj` files included in `Either.xcworkspace`). NB: `Either.xcworkspace` is for standalone development of Either, while `Either.xcodeproj` is for targets using Either as a dependency.
 3. Link your target against `Either.framework` and each of the dependency frameworks.
 4. Application targets should ensure that the framework gets copied into their application bundle. (Framework targets should instead require the application linking them to include Either and its dependencies.)
+
+Or use the Swift package manager and add this to you `Package.swift` file:  
+```
+  ...
+  dependencies: [
+    ...  
+    .package(url: "https://github.com/robrix/Either", "2.0.1" ..< "3.0.0")
+  ],
+  targets: [
+    ...
+    .target(
+        name: "<YourTargetName>",
+        dependencies: ["Either"]),
+  ]
+```

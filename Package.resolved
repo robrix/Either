@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Prelude",
+        "repositoryURL": "https://github.com/nxtstep/Prelude.git",
+        "state": {
+          "branch": null,
+          "revision": "1add7d8490e4d2bb1bb84ec4d025c0f700caec97",
+          "version": "3.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
