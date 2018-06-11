@@ -8,7 +8,7 @@ let package = Package(
             .library(name: "Either", targets: ["Either"])
         ],
         dependencies: [
-            .package(url: "https://github.com/nxtstep/Prelude.git", "3.0.1"..<"4.0.0")
+            .package(url: "https://github.com/robrix/Prelude.git", "3.0.1"..<"4.0.0")
         ],
         targets: [
             .target(name: "Either", dependencies: ["Prelude"], path: "Either"),
